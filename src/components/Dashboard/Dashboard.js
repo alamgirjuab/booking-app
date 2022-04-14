@@ -69,15 +69,15 @@ const Dashboard = () => {
 
             {/* Desktop View */}
 
-            <div className="row desktop-view">
-                <div className="col-2 right-nav">
+            <div className="row m-0 desktop-view">
+                <div className="col-md-2 right-nav">
                     <img className="img-fluid mx-auto d-block mt-4" src={logo} alt="logo" />
                     <ul className="side-menu mt-5 p-0">
                         <li><a className="active" href="#">Home</a></li>
                         <li><a href="#">Profile</a></li>
                     </ul>
                 </div>
-                <div className="col-10">
+                <div className="col-md-10">
                     <div className="head">
                     </div>
                     <div className="main-area">
@@ -99,9 +99,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-
         </>
-
     );
 };
 
