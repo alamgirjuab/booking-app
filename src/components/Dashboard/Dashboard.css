@@ -21,11 +21,15 @@
 
 .side-menu li a{
     text-decoration: none;
-    background-color: #94bfff;
-    background-image: linear-gradient(to right, #bfdafe , #89b9ff);
+    background-color: #e8f2ff;
     padding: 20px 60px;
     border-radius: 10px;
     color: black;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.side-menu li a:hover,.active{
+    background-image: linear-gradient(to right, #bfdafe , #89b9ff);
 }
 
 .head{
@@ -35,4 +39,49 @@
 
 .main-area{
     margin-left: 100px;
+}
+
+.btn-date{
+    width: 60px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid #1f4d90;
+    background-color: white;
+}
+
+.btn-date:hover{
+    background-color: #289125;
+    color: white;
+}
+
+.btn-date:focus{
+    background-color: #289125;
+    color: white;
+}
+
+/* .btn-active{
+    background-color: #289125;
+    color: white;
+} */
+
+.btn-time{
+    padding: 20px 40px;
+    margin-right: 20px;
+    color: #154388;
+    background-color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 2px solid #1f4d90;
+}
+
+.btn-time:hover{
+    background-color: #289125;
+    color: white;
+}
+
+.btn-time:focus{
+    background-color: #289125;
+    color: white;
 }

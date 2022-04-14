@@ -20,16 +20,14 @@ const Dashboard = () => {
 
     const timeSlot = myEventDate.filter(availableSlot => availableSlot.date === myEventTime);
 
-    console.log(timeSlot[0]?.available);
+    // console.log(timeSlot[0]?.available);
 
-    // console.log(moment(setMyEventDate.date));
-    // console.log(myEventDate);
     return (
         <div className="row">
             <div className="col-2 right-nav">
                 <img className="img-fluid mx-auto d-block mt-4" src={logo} alt="logo" />
                 <ul className="side-menu">
-                    <li><a href="#">Home</a></li>
+                    <li><a className="active" href="#">Home</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Demo</a></li>
                     <li><a href="#">Demo</a></li>
@@ -44,13 +42,13 @@ const Dashboard = () => {
                     <h2 className="fw-bold mt-3">Book Demo Session Slot</h2>
                     <h3 className="fw-bold mt-5">Select Date</h3>
                     {
-                        myEventDate.map(selectDate => <button key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date)}>{moment.utc(selectDate.date).format("MMM DD ddd")}</button>)
+                        myEventDate.map(selectDate => <button className='btn-date' key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date)}>{moment.utc(selectDate.date).format("ddd DD MMM")}</button>)
                     }
                     <h3 className="fw-bold mt-5">Select Slote</h3>
                     {
-                        timeSlot[0]?.available.map((t, index) => <button key={index}>{t.hour}:{t.min}-{t.hour + 1}:{t.min}</button>)
-                    }
-                    <button type="button" className="btn btn-success mt-5">Proceed to Pay</button>
+                        timeSlot[0]?.available.map((t, index) => <button className="btn-time" key={index}>{t.hour}:{t.min} PM - {t.hour + 1}:{t.min} PM</button>)
+                    } <br />
+                    <button type="button" className="btn btn-success mt-3">Proceed to Pay</button>
                 </div>
             </div>
         </div>
@@ -58,3 +56,13 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// const [activeBtn, setActiveBtn] = useState('');
+
+// const handleTimeSlot = (getTime, bgColor) => {
+//     setMyEventTime(getTime);
+//     setActiveBtn(bgColor);
+//     return true;
+// }
+
+// myEventDate.map(selectDate => <button className={activeBtn ? 'btn-active btn-date' : 'btn-date'} key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date, '.')}>{moment.utc(selectDate.date).format("ddd DD MMM")}</button>)
