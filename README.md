@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Booking App / Time Slot Reservation App
 
 Live Project Link: (https://alamgir-booking-app.netlify.app/).
 
