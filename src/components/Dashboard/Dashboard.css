@@ -1,0 +1,38 @@
+.right-nav{
+    background-color: #fafafa;
+    height: 98vh;
+}
+.right-nav img{
+    text-align: center;
+}
+.side-menu{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.side-menu li{
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.side-menu li a{
+    text-decoration: none;
+    background-color: #94bfff;
+    background-image: linear-gradient(to right, #bfdafe , #89b9ff);
+    padding: 20px 60px;
+    border-radius: 10px;
+    color: black;
+}
+
+.head{
+    border-bottom: 1px solid lightgray;
+    height: 80px;
+}
+
+.main-area{
+    margin-left: 100px;
+}
