@@ -136,4 +136,14 @@
     background-color: #1e4d8e;
 }
 
+.btn-time{
+    padding: 10px 10px;
+    margin-right: 10px;
+    color: #154388;
+    background-color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 2px solid #1f4d90;
+}
+
 }

@@ -24,15 +24,13 @@ const Dashboard = () => {
     // console.log(timeSlot[0]?.available);
 
     return (
-
+        /* Mobile View */
         <>
             <div className="mobile-view">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#"><img className="img-fluid" src={logo} alt="logo" /></a>
-
                         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            {/* <span className="navbar-toggler-icon"></span> */}
                             <HiMenuAlt2 />
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -41,20 +39,7 @@ const Dashboard = () => {
                                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Features</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown link
-                                    </a>
-                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a className="dropdown-item" href="#">Action</a></li>
-                                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
+                                    <a className="nav-link" href="#">Profile</a>
                                 </li>
                             </ul>
                         </div>
@@ -63,7 +48,6 @@ const Dashboard = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="main-area">
-                            {/* <span className="fs-3"><AiOutlineArrowLeft /></span> */}
                             <h2 className="fw-bold mt-3">Book Demo Session Slot</h2>
                             <div className="my-border-bottom">
                                 <div className="border-bottom-left"></div>
@@ -83,6 +67,8 @@ const Dashboard = () => {
                 </div>
             </div>
 
+            {/* Desktop View */}
+
             <div className="row desktop-view">
                 <div className="col-2 right-nav">
                     <img className="img-fluid mx-auto d-block mt-4" src={logo} alt="logo" />
@@ -93,7 +79,6 @@ const Dashboard = () => {
                 </div>
                 <div className="col-10">
                     <div className="head">
-                        {/* <span><BsJustifyLeft /></span> */}
                     </div>
                     <div className="main-area">
                         <span className="fs-3"><AiOutlineArrowLeft /></span>
@@ -113,9 +98,6 @@ const Dashboard = () => {
                         <button type="button" className="btn pay-btn mt-3">Proceed to Pay</button>
                     </div>
                 </div>
-
-                {/* Mobile menu */}
-
             </div>
 
         </>
@@ -124,13 +106,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-// const [activeBtn, setActiveBtn] = useState('');
-
-// const handleTimeSlot = (getTime, bgColor) => {
-//     setMyEventTime(getTime);
-//     setActiveBtn(bgColor);
-//     return true;
-// }
-
-// myEventDate.map(selectDate => <button className={activeBtn ? 'btn-active btn-date' : 'btn-date'} key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date, '.')}>{moment.utc(selectDate.date).format("ddd DD MMM")}</button>)
