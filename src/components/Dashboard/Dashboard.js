@@ -21,8 +21,6 @@ const Dashboard = () => {
 
     const timeSlot = myEventDate.filter(availableSlot => availableSlot.date === myEventTime);
 
-    // console.log(timeSlot[0]?.available);
-
     return (
         /* Mobile View */
         <>
@@ -88,6 +86,7 @@ const Dashboard = () => {
                             <div className="border-bottom-right"></div>
                         </div>
                         <h3 className="fw-bold mt-5">Select Date</h3>
+
                         {
                             myEventDate.map(selectDate => <button className='btn-date' key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date)}>{moment.utc(selectDate.date).format("ddd DD MMM")}</button>)
                         }
