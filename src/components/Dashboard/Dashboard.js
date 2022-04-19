@@ -73,6 +73,8 @@ const Dashboard = () => {
                     <ul className="side-menu mt-5 p-0">
                         <li><a className="active" href="#">Home</a></li>
                         <li><a href="#">Profile</a></li>
+                        <li><a className="transparent-color" href="#">Demo</a></li>
+                        <li><a className="transparent-color" href="#">Demo</a></li>
                     </ul>
                 </div>
                 <div className="col-md-10">
