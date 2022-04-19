@@ -93,7 +93,7 @@ const Dashboard = () => {
                         <li><a className="transparent-color" href="#">Demo</a></li>
                     </ul>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-10 pad-zero">
                     <div className="head">
                     </div>
                     <div className="main-area">
