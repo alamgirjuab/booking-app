@@ -4,6 +4,8 @@ import { HiMenuAlt2 } from 'react-icons/hi';
 import './Dashboard.css';
 import logo from '../../img/logo.png';
 import moment from 'moment';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const Dashboard = () => {
     const [myEventDate, setMyEventDate] = useState([]);
@@ -22,7 +24,9 @@ const Dashboard = () => {
     const timeSlot = myEventDate.filter(availableSlot => availableSlot.date === myEventTime);
 
     return (
-        /* Mobile View */
+        /*----------------------------
+         | HTML code for Mobile View |
+         ---------------------------*/
         <>
             <div className="mobile-view">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -52,20 +56,31 @@ const Dashboard = () => {
                                 <div className="border-bottom-right"></div>
                             </div>
                             <h3 className="fw-bold mt-5">Select Date</h3>
-                            {
-                                myEventDate.map(selectDate => <button className='btn-date' key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date)}>{moment.utc(selectDate.date).format("ddd DD MMM")}</button>)
-                            }
+
+                            <Swiper
+                                spaceBetween={25}
+                                slidesPerView={4}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)}
+                            >
+                                {
+                                    myEventDate.map(selectDate => <SwiperSlide> <button className='btn-date' key={selectDate.date} onClick={() => handleTimeSlot(selectDate.date)}>{moment.utc(selectDate.date).format("ddd DD MMM")}</button></SwiperSlide>)
+                                }
+                            </Swiper>
+
                             <h3 className="fw-bold mt-5">Select Slote</h3>
                             {
                                 timeSlot[0]?.available.map((t, index) => <button className="btn-time" key={index}>{t.hour}:{t.min} PM - {t.hour + 1}:{t.min} PM</button>)
                             } <br />
-                            <button type="button" className="btn mt-3 pay-btn">Proceed to Pay</button>
+                            <button type="button" className="btn mt-5 pay-btn">Proceed to Pay</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Desktop View */}
+            {/*-----------------------------
+              | HTML code for Desktop View |
+              ----------------------------*/}
 
             <div className="row m-0 desktop-view">
                 <div className="col-md-2 right-nav">
@@ -73,6 +88,7 @@ const Dashboard = () => {
                     <ul className="side-menu mt-5 p-0">
                         <li><a className="active" href="#">Home</a></li>
                         <li><a href="#">Profile</a></li>
+                        <li><a className="transparent-color" href="#">Demo</a></li>
                         <li><a className="transparent-color" href="#">Demo</a></li>
                         <li><a className="transparent-color" href="#">Demo</a></li>
                     </ul>
@@ -96,7 +112,7 @@ const Dashboard = () => {
                         {
                             timeSlot[0]?.available.map((t, index) => <button className="btn-time" key={index}>{t.hour}:{t.min} PM - {t.hour + 1}:{t.min} PM</button>)
                         } <br />
-                        <button type="button" className="btn pay-btn mt-3">Proceed to Pay</button>
+                        <button type="button" className="btn pay-btn mt-5">Proceed to Pay</button>
                     </div>
                 </div>
             </div>

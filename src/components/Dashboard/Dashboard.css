@@ -122,6 +122,10 @@
     color: white;
 }
 
+/*------------------------------
+ | Mobile Responsible CSS Code | 
+ -----------------------------*/
+
 @media screen and (max-width:991px){
 .mobile-view{
     display: block;
@@ -147,6 +151,10 @@
     font-weight: 700;
     border-radius: 5px;
     border: 2px solid #1f4d90;
+}
+
+.swiper-slide{
+    margin-right: 0;
 }
 
 }
